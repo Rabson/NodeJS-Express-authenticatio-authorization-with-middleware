@@ -1,0 +1,152 @@
+{
+	"info": {
+		"_postman_id": "99d627a3-ac92-4f4a-aa20-a05f0eeb750d",
+		"name": "express-nodejs-fs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "create user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"name\",\n    \"email\":\"emial@122.com\",\n    \"password\": \"password\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9000/api/users",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all user",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:9000/api/users",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "authenticate",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"emial@122.com\",\n    \"password\": \"password\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9000/api/users/authenticate",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"users",
+						"authenticate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "profile update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoibmFtZSIsImVtYWlsIjoiZW1pYWxAMTIyLmNvbSIsIl9pZCI6IjYwNGYzNWYzNGFlMzE3YjdhYTQwMDIyMSIsImlhdCI6MTYxNTgwMzg5MSwiZXhwIjoxNjE1ODE0NjkxLCJhdWQiOiJBUFAiLCJpc3MiOiJBUFAiLCJzdWIiOiJBdXRoIn0.YXlWJq7T_sZw6zyRxUYX8Rd6-KdeMF-JnWfOf7sKWdU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"name1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9000/api/users",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get profile",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoibmFtZSIsImVtYWlsIjoiZW1pYWxAMTIyLmNvbSIsIl9pZCI6IjYwNGYzNWYzNGFlMzE3YjdhYTQwMDIyMSIsImlhdCI6MTYxNTgwMzg5MSwiZXhwIjoxNjE1ODE0NjkxLCJhdWQiOiJBUFAiLCJpc3MiOiJBUFAiLCJzdWIiOiJBdXRoIn0.YXlWJq7T_sZw6zyRxUYX8Rd6-KdeMF-JnWfOf7sKWdU"
+					}
+				],
+				"url": {
+					"raw": "localhost:9000/api/users/profile",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"users",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
